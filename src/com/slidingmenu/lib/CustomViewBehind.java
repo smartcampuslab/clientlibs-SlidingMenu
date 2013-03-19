@@ -19,7 +19,8 @@ public class CustomViewBehind extends ViewGroup {
 
 	private static final String TAG = "CustomViewBehind";
 
-	private static final int MARGIN_THRESHOLD = 48; // dips
+	//private static final int MARGIN_THRESHOLD = 48; // dips
+	private static final int MARGIN_THRESHOLD = 20; // the same number of pixels as the width of the yellow tab
 	private int mTouchMode = SlidingMenu.TOUCHMODE_MARGIN;
 
 	private CustomViewAbove mViewAbove;
@@ -37,7 +38,7 @@ public class CustomViewBehind extends ViewGroup {
 
 	public CustomViewBehind(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		mMarginThreshold = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 
+		mMarginThreshold = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX,//TypedValue.COMPLEX_UNIT_DIP, 
 				MARGIN_THRESHOLD, getResources().getDisplayMetrics());
 	}
 
